@@ -1,0 +1,341 @@
+@import "./config";
+
+body {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif; 
+}
+// All sections
+section {
+    font-family: 'Poppins', sans-serif; 
+    background-color: white;
+}
+
+// Hero section.
+.hero {
+    background-color: #1c1d25;
+    height: 100vh; // we set this so that the height of hero area works.
+    min-height: 100vh;
+    color: white;
+    font-size: 3rem;
+
+    // nav contains logo and nav links
+    nav {
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        font-size: 2rem;
+        padding: 5px;
+
+        // Logo container
+        header {
+            // border: 1px solid red;                        
+            img {
+                display: inline-block;
+                margin: auto 0px;                
+                // border: 1px solid red;
+                width: 80px;
+                cursor: pointer;
+            }             
+        }
+
+        ul {
+            width: 500px;              
+            // border: 2px solid green;
+            display: flex;                        
+            justify-content: space-between;
+            align-items: center;
+
+            // To remove anchor default style.
+            a {
+                color: white;
+            } 
+
+            a:hover {
+                color: rgb(62, 150, 223);
+            }                       
+        }
+        // fontawesome icon.
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }                        
+    }
+
+    .hero-area {
+        // border: 3px solid steelblue;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-text {   
+            margin-left: 80px;   
+            margin-bottom: 100px;             
+            // border: 1px solid red;
+
+            .button {
+                @include button-round;                
+                cursor: pointer;
+        }
+                a {
+                    color: white;
+                }
+            }
+
+            .button:hover {
+                border: 2px solid black;
+                background-color: steelblue;
+                
+            }
+        }
+        // Socials container
+        .hero-socials {
+            // border: 1px solid red;
+            // margin-right: 80px;  
+            margin-bottom: 100px;  
+
+            // Select all socials
+            .social {
+                margin: 20px;
+
+                // all svg
+                svg:hover {
+                    fill: rgb(62, 150, 223);
+                }
+            }
+        }        
+    }
+    
+
+// About me section.
+.about-me-section {
+    padding: 20px 80px;
+    background-color: #36f595;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }    
+    
+    .about-me-information {      
+        font-size: 1.5rem;    
+        // display: flex;
+        // justify-content: space-between;          
+    }
+    
+    .about-me-headshot {
+        
+        .headshot {
+            width: $pictureFrame-width;            
+            border-radius: $pictureFrame-width * 0.67; // Scale based on the width.
+        }
+    }
+}
+
+// Project section
+.project-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 2rem;
+    color: black;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+    .projects-container {
+        display: flex;
+        justify-content: space-evenly;
+        
+        // All project cards in the project section.
+        .project-card {
+            width: 300px;                        
+            margin-top: 25px;
+            box-shadow: 5px 5px 20px rgb(163, 163, 163);
+            cursor: pointer;
+        }
+        .project-card:hover {
+            border: 1px solid black;
+        }
+
+        // All the project images in the project section
+        .project-image {
+            margin-top: 25px;
+            width: 250px;
+            border-radius: 10px;
+        }
+    }
+    // All modals.
+    .modal {
+        font-size: 1rem;
+        width: 50ch;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+    }
+    .modal::backdrop {
+        background-color: rgba(31, 31, 31, 0.7);
+    }
+    
+    .modal-header {        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-title {
+        font-size: 2rem;
+    }
+
+    .modal-close-button {
+        align-self: flex-start;
+        cursor: pointer;
+
+        svg:hover {
+            fill: red;
+        }
+    }
+
+    .modal-text {
+        margin: 5px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .modal-icons-container {       
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-icon:hover {
+        fill: rgb(0, 132, 255);
+    }
+
+    a {
+        outline: none;
+        color: black;
+    }
+
+    .demo-link-container {     
+        width: 90px;   
+        display: flex;
+        justify-content: space-around;
+        // border: 1px solid red;
+        margin: 0px 10px;
+    }
+
+    .code-link-container {   
+        width: 80px;        
+        display: flex;
+        justify-content: space-around;
+        margin: 0px 10px;
+    }
+}
+
+// Contact section.
+footer {
+
+    min-height: 500px;
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 2rem;        
+        margin: 10px;
+        // border: 1px solid blue;
+    }
+    
+    form {
+        // font-family: 'Poppins', sans-serif; 
+        // border: 1px solid blue;
+        width: 70%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 1rem;
+        margin-bottom: 10px;
+
+        input {
+            font-family: 'Poppins', sans-serif; 
+            font-size: 1rem;
+            padding: 5px 0;           
+        }
+
+        textarea {
+            font-family: 'Poppins', sans-serif; 
+            font-size: 1rem;
+            font-weight: 600;
+            resize: none;
+        }
+
+        button {
+            font-family: 'Poppins', sans-serif; 
+            // background-color: steelblue;
+            padding: 5px 0px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all .4s ease;
+            cursor: pointer;
+            
+        }
+
+        button:hover {
+            background-color: rgb(62, 150, 223);
+            border-radius: 5px;
+        }
+    }
+
+    
+}
+
+// Media queries
+@media only screen and (max-width: 1000px) {
+    // Hero section.
+    .hero {
+        nav {
+            // align-items: flex-start;
+
+            ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+                border: 0;
+                color: white;
+                background-color: transparent;
+                font-size: 30px;        
+            }
+        }
+    }       
+    
+    // about me section
+    .about-me-section {
+        flex-wrap: wrap;
+        .about-me-information {
+           h2 {
+               text-align: center;
+           }
+        }
+    }
+
+    // project section
+    .projects-container {
+        flex-wrap: wrap;
+    }
+
+}
+
