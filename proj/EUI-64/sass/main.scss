@@ -1,0 +1,120 @@
+@import "./config";
+
+
+body {
+    font-family: 'Montserrat' ,Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background: #1C92D3;     
+   
+}
+
+
+.outer-container {
+    color: #E6E6E6;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    min-height: 55vh;
+    margin: 50px auto;
+    padding: 20px 0px;
+    background-color: #4A4A4A; 
+    box-shadow: 4px 4px 2px rgb(53, 53, 53);
+
+    h1 {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    hr {
+        width: 80%;                
+        outline-width: thin;
+        border-color: #949393;
+        margin-bottom: 10px;
+    }
+
+    form {        
+        flex-basis: 150px;
+        width: 80%;                   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        // border: 1px solid red;
+
+
+        input[type=text] {
+            color: #E6E6E6;
+            width: 50%;
+            font-size: 1rem;
+            padding: 10px 10px;            
+            background-color: #1C1C1C; 
+            border: none;
+            border-radius: 10px; 
+            outline: none;              
+            transition: all 2s ease;
+        }  
+    }
+
+    // Buttons container
+    .buttons-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        button {
+            background-color: #2B2B2B;  
+            color: white;          
+            border: none;                       
+            padding: 10px 25px;                        
+            display: inline-block;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 4px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition-duration: .5s;
+        }
+        // Submit button
+        button:first-child:hover {
+            background-color: #008CBA;
+            border: 1px solid black;
+
+
+        }
+        // Reset button
+        button:last-child:hover {
+            background-color: #555555;
+            border: 1px solid black;
+
+        }
+
+
+    }
+
+    #resultsHeading {     
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    #resultsContainer {                   
+        flex-grow: 1;
+        width: 80%;
+        font-size: 1rem;
+        background-color: #1C1C1C;                
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgb(70, 70, 70);
+        padding: 10px 5px;
+        letter-spacing: 1px;
+        overflow-wrap: break-word;
+        
+    }
+}
+
+
+

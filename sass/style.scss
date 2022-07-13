@@ -75,9 +75,9 @@ section {
             // border: 1px solid red;
 
             .button {
-                @include button-round;                
+                @include button-round($fontSize-desktop);                
                 cursor: pointer;
-        }
+            }
                 a {
                     color: white;
                 }
@@ -120,18 +120,19 @@ section {
     }    
     
     .about-me-information {      
-        font-size: 1.5rem;    
-        // display: flex;
-        // justify-content: space-between;          
+       font-size: 2rem;        
+       text-align: center;
+       text-align: justify;
+       
     }
     
-    .about-me-headshot {
+    // .about-me-headshot {
         
-        .headshot {
-            width: $pictureFrame-width;            
-            border-radius: $pictureFrame-width * 0.67; // Scale based on the width.
-        }
-    }
+    //     .headshot {
+    //         width: $pictureFrame-width;            
+    //         border-radius: $pictureFrame-width * 0.67; // Scale based on the width.
+    //     }
+    // }
 }
 
 // Project section
@@ -338,4 +339,54 @@ footer {
     }
 
 }
+
+@media only screen and (max-width: 520px) {
+    // Hero section.
+    .hero {
+        .hero-area {
+            .hero-text {
+                font-size: $fontSize-mobile;
+                margin-left: 50px;
+    
+                .button {
+                    @include button-round($fontSize-mobile);                             
+                }
+            }
+
+            .hero-socials {    
+                // Select all socials
+                .social {
+                    margin: 0 20px;
+    
+                    // all svg
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 350px) {
+    // Hero section.
+    .hero {
+        .hero-area {
+            .hero-text {
+                margin-left: 20px;                
+            }
+        }
+    }    
+
+    // About me section.
+    .about-me-section {
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+}
+        
+
+
 

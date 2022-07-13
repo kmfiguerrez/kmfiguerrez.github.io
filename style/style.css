@@ -139,12 +139,9 @@ section {
 }
 
 .about-me-section .about-me-information {
-  font-size: 1.5rem;
-}
-
-.about-me-section .about-me-headshot .headshot {
-  width: 300px;
-  border-radius: 201px;
+  font-size: 2rem;
+  text-align: center;
+  text-align: justify;
 }
 
 .project-section {
@@ -372,6 +369,38 @@ footer form button:hover {
   .projects-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .hero .hero-area .hero-text {
+    font-size: 1rem;
+    margin-left: 50px;
+  }
+  .hero .hero-area .hero-text .button {
+    width: 6.7rem;
+    height: 2rem;
+    border-radius: 26.7rem;
+    padding-top: 0.2rem;
+    font-size: 1rem;
+    background-color: coral;
+    text-align: center;
+  }
+  .hero .hero-area .hero-socials .social {
+    margin: 0 20px;
+  }
+  .hero .hero-area .hero-socials .social svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .hero .hero-area .hero-text {
+    margin-left: 20px;
+  }
+  .about-me-section h2 {
+    font-size: 2.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,12 +13,12 @@ $fontSize-mobile: 1rem;
 $pictureFrame-width: 300px;
 
 
-@mixin button-round {    
-    width: $fontSize-desktop * 6.7; // Scale based on font-size.
-    height: $fontSize-desktop * 2; // Scale Based on font-size.    
-    border-radius: $fontSize-desktop * 26.7; // Scale based on font-size.
-    padding-top: $fontSize-desktop * 0.2; // Scale based on font-size.
-    font-size: $fontSize-desktop;
+@mixin button-round($fontSize) {    
+    width: $fontSize * 6.7; // Scale based on font-size.
+    height: $fontSize * 2; // Scale Based on font-size.    
+    border-radius: $fontSize * 26.7; // Scale based on font-size.
+    padding-top: $fontSize * 0.2; // Scale based on font-size.
+    font-size: $fontSize;
     background-color: coral;
     text-align: center;
 }
